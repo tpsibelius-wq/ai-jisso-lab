@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">小さく改善案を提示するアイコン</title>
+  <desc id="desc">AI実装Labのブランドカラーで描いた、改善アイデアと段階的な進め方を示す提案書のアイコン</desc>
+
+  <!-- Proposal sheet -->
+  <rect x="29" y="35" width="174" height="185" rx="25"
+        fill="#FFFFFF" stroke="#0B3A63" stroke-width="10"/>
+
+  <!-- Sheet tab -->
+  <rect x="70" y="18" width="82" height="34" rx="13"
+        fill="#0A98A8" stroke="#0B3A63" stroke-width="9"/>
+
+  <!-- Idea bulb -->
+  <circle cx="83" cy="98" r="31"
+          fill="#E9F7F5" stroke="#0B3A63" stroke-width="8"/>
+  <path d="M68 95c0-9 6.8-16 15-16s15 7 15 16c0 6-3.2 10.5-7.5 13.5-3 2.1-4.5 4.5-4.5 8.5h-6c0-4-1.5-6.4-4.5-8.5C71.2 105.5 68 101 68 95Z"
+        fill="#0A98A8"/>
+  <path d="M77 121h12M78 129h10" fill="none" stroke="#0B3A63" stroke-width="6" stroke-linecap="round"/>
+  <path d="M83 56v-10M52 68l-8-8M114 68l8-8" fill="none" stroke="#8BC53F" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Proposal lines -->
+  <path d="M126 79h48M126 101h39M126 123h48" fill="none" stroke="#0A98A8" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- Small-step improvement chart -->
+  <rect x="54" y="177" width="31" height="20" rx="5"
+        fill="#E9F7F5" stroke="#0B3A63" stroke-width="7"/>
+  <rect x="91" y="158" width="31" height="39" rx="5"
+        fill="#0A98A8" stroke="#0B3A63" stroke-width="7"/>
+  <rect x="128" y="138" width="31" height="59" rx="5"
+        fill="#8BC53F" stroke="#0B3A63" stroke-width="7"/>
+
+  <!-- Upward direction arrow -->
+  <path d="M55 159c24-3 48-13 67-28 13-10 25-22 34-35"
+        fill="none" stroke="#0B3A63" stroke-width="8" stroke-linecap="round"/>
+  <path d="m145 99 15-7-1 17" fill="none" stroke="#0B3A63" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Confirmation badge -->
+  <circle cx="197" cy="191" r="31" fill="#8BC53F" stroke="#FFFFFF" stroke-width="7"/>
+  <path d="m183 191 10 10 19-22" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

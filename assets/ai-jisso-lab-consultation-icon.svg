@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">相談アイコン</title>
+  <desc id="desc">AI実装Labのブランドカラーで描いた、二つの吹き出しとチェックマークのアイコン</desc>
+
+  <!-- Rear speech bubble -->
+  <path d="M104 55h76c24.3 0 44 18.4 44 41.2v20.6c0 22.8-19.7 41.2-44 41.2h-16.5l-22.8 19.1c-5.6 4.7-14.1.7-14.1-6.6V158H104c-24.3 0-44-18.4-44-41.2V96.2C60 73.4 79.7 55 104 55Z"
+        fill="#0A98A8" stroke="#0B3A63" stroke-width="10" stroke-linejoin="round"/>
+
+  <!-- Front speech bubble -->
+  <path d="M48 91h84c25.4 0 46 19.2 46 42.9v19.2c0 23.7-20.6 42.9-46 42.9H93.4l-26.8 22.3c-5.8 4.8-14.6.8-14.6-6.7V196h-4c-25.4 0-46-19.2-46-42.9v-19.2C2 110.2 22.6 91 48 91Z"
+        fill="#FFFFFF" stroke="#0B3A63" stroke-width="10" stroke-linejoin="round"/>
+
+  <!-- Conversation dots -->
+  <circle cx="49" cy="144" r="7" fill="#0A98A8"/>
+  <circle cx="73" cy="144" r="7" fill="#0A98A8"/>
+  <circle cx="97" cy="144" r="7" fill="#0A98A8"/>
+
+  <!-- Check badge -->
+  <circle cx="190" cy="177" r="31" fill="#8BC53F" stroke="#FFFFFF" stroke-width="7"/>
+  <path d="m176 177 10 10 19-22" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
