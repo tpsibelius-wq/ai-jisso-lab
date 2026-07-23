@@ -43,6 +43,18 @@
   </div>
 </header>
 
+<!-- ===================== SECTION NAV (sticky jump bar) ===================== -->
+<nav class="section-nav" aria-label="ページ内の章">
+  <div class="wrap section-nav__inner">
+    <a class="section-nav__link" href="#problem">減らせる業務</a>
+    <a class="section-nav__link" href="#services">料金</a>
+    <a class="section-nav__link" href="#profile">実績</a>
+    <a class="section-nav__link" href="#flow">進め方</a>
+    <a class="section-nav__link" href="#security">安心</a>
+    <a class="section-nav__link" href="#contact">相談</a>
+  </div>
+</nav>
+
 <main>
 
 <!-- ============================ HERO ============================ -->
@@ -632,6 +644,28 @@
 <div class="mobile-cta">
   <a class="btn btn--primary" href="https://timerex.net/s/tp.sibelius_be66/d331711f" target="_blank" rel="noopener">30分、困りごとを話す</a>
 </div>
+
+<!-- Section-nav scroll-spy: highlight the chapter currently in view -->
+<script>
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav__link'));
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  function setActive(id) {
+    links.forEach(function (a) {
+      var on = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('is-active', on);
+      if (on) { a.setAttribute('aria-current', 'true'); } else { a.removeAttribute('aria-current'); }
+    });
+  }
+  var sections = links.map(function (a) {
+    return document.getElementById(a.getAttribute('href').slice(1));
+  }).filter(Boolean);
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) setActive(e.target.id); });
+  }, { rootMargin: '-112px 0px -58% 0px', threshold: 0 });
+  sections.forEach(function (s) { io.observe(s); });
+})();
+</script>
 
 </body>
 </html>

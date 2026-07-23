@@ -63,7 +63,7 @@
 /* ---- Reset ------------------------------------------------------------ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: 120px; -webkit-text-size-adjust: 100%; }
 
 body {
   font-family: var(--font-sans);
@@ -1094,5 +1094,48 @@ h3 { font-size: 17px; font-weight: 700; line-height: 1.7; }
   .btn, .service-card, .faq-item, .disclose { transition: none; }
   .btn:hover, .btn:active { transform: none; }
   .faq-item > summary::after { transition: none; }
+  .section-nav__link { transition: none; }
+}
+
+/* ---- Section nav — sticky in-page jump bar (sits under .site-header) --- */
+.section-nav {
+  position: sticky;
+  top: 64px;                         /* directly beneath the 64px sticky header */
+  z-index: 49;
+  background: rgba(255, 255, 255, .92);
+  -webkit-backdrop-filter: saturate(1.1) blur(6px);
+  backdrop-filter: saturate(1.1) blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+.section-nav__inner {
+  display: flex;
+  align-items: stretch;
+  gap: clamp(.1rem, 1.4vw, 1rem);
+  min-height: 48px;
+  overflow-x: auto;
+  scrollbar-width: none;             /* Firefox */
+  -webkit-overflow-scrolling: touch;
+}
+.section-nav__inner::-webkit-scrollbar { display: none; }
+.section-nav__link {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  padding: 0 .4rem;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .03em;
+  line-height: 1.2;
+  color: var(--ink-3);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+.section-nav__link:hover { color: var(--ink); }
+.section-nav__link.is-active { color: var(--teal); border-bottom-color: var(--teal); }
+@media (min-width: 768px) {
+  .section-nav__inner { justify-content: center; gap: clamp(1rem, 3vw, 2.2rem); }
+  .section-nav__link { font-size: 14px; padding: 0 .25rem; }
 }
 
