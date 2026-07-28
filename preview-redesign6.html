@@ -396,6 +396,16 @@ a{color:inherit;text-decoration:none;}
 .trust__d,.faq__body{font-size:12.5px;}
 .faq summary{font-size:13.5px;}
 
+
+/* 左パネル下部：常時表示は電話ではなく相談導線に */
+.side__act{display:flex;flex-direction:column;align-items:flex-end;gap:.7rem;text-align:right;}
+.side__cta{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:12.5px;letter-spacing:.05em;
+  color:var(--navy);background:#fff;padding:.72rem 1.1rem;transition:background .18s,transform .18s;}
+.side__cta::after{content:"→";font-family:var(--en);}
+.side__cta:hover{background:#8fd3d8;transform:translateY(-1px);}
+.side__sub2{font-size:11px;letter-spacing:.05em;color:var(--on-navy-3);border-bottom:1px solid rgba(255,255,255,.24);padding-bottom:2px;}
+.side__sub2:hover{color:#fff;border-color:rgba(255,255,255,.6);}
+
 </style>
 </head>
 <body>
@@ -414,7 +424,10 @@ a{color:inherit;text-decoration:none;}
     </div>
     <div class="side__btm">
       <span class="side__scroll">Scroll</span>
-      <span class="side__tel"><span class="side__tel-lb">Tel</span><br><span class="side__tel-v">080-3640-5346</span></span>
+      <span class="side__act">
+        <a class="side__cta" href="https://timerex.net/s/tp.sibelius_be66/d331711f" target="_blank" rel="noopener">30分、困りごとを話す</a>
+        <a class="side__sub2" href="#contact">LINE・メールで相談する</a>
+      </span>
     </div>
   </aside>
 
@@ -463,7 +476,7 @@ a{color:inherit;text-decoration:none;}
         </div>
         <div class="svc__item">
           <p class="svc__num">02</p>
-          <div class="svc__img"><img src="assets/img_tool.jpg" alt="実際に制作した業務ツールの画面"></div>
+          <div class="svc__img"><img src="assets/img_tool.png" alt="実際に制作した業務ツールの画面"></div>
           <p class="svc__ti">専用のツールをつくる</p>
           <p class="svc__tx">問い合わせ・予約の受付、見積や報告書づくり、ホームページ。既製品に合わせず、あなたの業務にちょうどの形で用意します。<br><span style="color:var(--ink-3);font-size:12.5px">（写真：実際に制作したヒアリング支援ツール）</span></p>
         </div>
@@ -498,7 +511,7 @@ a{color:inherit;text-decoration:none;}
           <p class="work__metric"><span class="work__from">週10時間</span><span class="work__ar">&#8594;</span><span class="work__to">週3時間</span><span class="work__cut">70%削減</span></p>
         </div>
         <div>
-          <div class="work__fig"><img src="assets/img_tool.jpg" alt="制作したヒアリング支援ツールの画面"></div>
+          <div class="work__fig"><img src="assets/img_tool.png" alt="制作したヒアリング支援ツールの画面"></div>
           <p class="work__cap">Tool &#8213; ヒアリング支援ツール（自社開発）</p>
         </div>
       </div>
