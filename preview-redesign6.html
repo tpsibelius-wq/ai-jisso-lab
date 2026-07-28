@@ -4,7 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
-<title>AI実装Lab — v6（分割レイアウト・統一フォーマット）</title>
+  <title>AI実装Lab｜数百万円だった専用システムを、手が届く値段で（静岡県東部）</title>
+  <meta name="description" content="問い合わせ対応・予約受付・ホームページ、見積やメール作成まで。散らばった業務を整理し、あなたにちょうどのしくみに。これまで数百万円かかった専用システムも、AIで早く・安く。静岡県東部（沼津・三島・裾野・富士・御殿場）の小さな会社・事務所・地域団体向け。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI実装Lab｜数百万円だった専用システムを、手が届く値段で">
+  <meta property="og:description" content="問い合わせ対応・予約受付・ホームページ、書類やメール作成まで。散らばった業務を整理し、あなたにちょうどのしくみを、AIで早く・安く。相談から実装まで、鈴木が担当します。">
+  <meta property="og:image" content="https://tpsibelius-wq.github.io/ai-jisso-lab/assets/ogp.png">
+  <meta property="og:url" content="https://tpsibelius-wq.github.io/ai-jisso-lab/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo-mark.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/logo-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -33,7 +42,8 @@ a{color:inherit;text-decoration:none;}
 .u-en{font-family:var(--en);font-weight:400;letter-spacing:.16em;text-transform:uppercase;}
 
 /* ============ 分割シェル ============ */
-.shell{display:grid;grid-template-columns:var(--side) minmax(0,1fr);}
+.shell{display:grid;grid-template-columns:var(--side) minmax(0,1fr);max-width:100%;}
+.side,.main{min-width:0;max-width:100%;}
 
 /* 左：固定パネル */
 .side{position:sticky;top:0;height:100vh;background:var(--navy);color:var(--on-navy-2);
@@ -229,6 +239,162 @@ a{color:inherit;text-decoration:none;}
   .cmp th,.cmp td{padding:.8rem .5rem;}
 }
 
+
+/* ---- contact：導線3レーン ---- */
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.2rem,3vw,2.4rem);
+  border-top:1px solid rgba(255,255,255,.16);padding-top:1.9rem;}
+.lane{min-width:0;}
+.lane__no{font-family:var(--en);font-size:.92rem;letter-spacing:.2em;color:#8fd3d8;font-variant-numeric:lining-nums;}
+.lane__ti{margin-top:.7rem;font-weight:900;font-size:1.06rem;letter-spacing:.04em;color:#fff;}
+.lane__tx{margin-top:.6rem;font-size:13px;line-height:1.95;color:var(--on-navy-2);}
+.lane__act{margin-top:1.1rem;display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;}
+.lane__btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:700;font-size:13.5px;letter-spacing:.05em;
+  background:#fff;color:var(--navy);padding:.85rem 1.5rem;transition:background .18s;}
+.lane__btn:hover{background:#8fd3d8;}
+.lane__btn.is-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);}
+.lane__btn.is-ghost:hover{background:rgba(255,255,255,.1);}
+.lane__qr{width:104px;height:104px;background:#fff;padding:6px;flex:none;}
+.lane__hint{margin-top:.6rem;font-size:11px;color:var(--on-navy-3);letter-spacing:.04em;}
+.contact__mail{margin-top:1.8rem;font-size:13px;color:var(--on-navy-2);letter-spacing:.04em;}
+.contact__mail a{color:#fff;border-bottom:1px solid rgba(255,255,255,.35);}
+
+/* ---- contact：フォーム ---- */
+.formwrap{margin-top:2.2rem;border-top:1px solid rgba(255,255,255,.16);padding-top:1.8rem;}
+.formwrap summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.8rem;
+  font-weight:700;font-size:14px;letter-spacing:.04em;color:#fff;}
+.formwrap summary::-webkit-details-marker{display:none;}
+.formwrap summary::after{content:"+";font-family:var(--en);font-size:1.15rem;color:var(--on-navy-3);}
+.formwrap details[open] summary::after{content:"\2212";}
+.form__intro{margin-top:1rem;font-size:12.5px;line-height:1.95;color:var(--on-navy-2);}
+.form{margin-top:1.4rem;max-width:44rem;}
+.field{margin-bottom:1.1rem;}
+.field label{display:block;font-size:12px;letter-spacing:.08em;color:var(--on-navy-2);margin-bottom:.45rem;}
+.field .req,.field .opt{font-size:10px;letter-spacing:.08em;margin-left:.6rem;padding:.1rem .45rem;}
+.field .req{background:#8fd3d8;color:var(--navy);}
+.field .opt{border:1px solid rgba(255,255,255,.3);color:var(--on-navy-3);}
+.field input[type=text],.field input[type=email],.field textarea{
+  width:100%;font-family:var(--jp);font-size:14px;line-height:1.8;color:#fff;letter-spacing:.03em;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.22);padding:.8rem .95rem;border-radius:0;}
+.field textarea{min-height:8.5rem;resize:vertical;}
+.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.34);}
+.field input:focus,.field textarea:focus{outline:none;border-color:#8fd3d8;background:rgba(255,255,255,.1);}
+.consent{display:flex;align-items:flex-start;gap:.7rem;font-size:12.5px;line-height:1.85;color:var(--on-navy-2);}
+.consent input{margin-top:.45rem;accent-color:#8fd3d8;width:15px;height:15px;flex:none;}
+.consent a{color:#fff;border-bottom:1px solid rgba(255,255,255,.35);}
+.form__submit{margin-top:.6rem;font-weight:700;font-size:14px;letter-spacing:.06em;background:#fff;color:var(--navy);
+  padding:.95rem 2.1rem;border:0;cursor:pointer;font-family:var(--jp);transition:background .18s;}
+.form__submit:hover{background:#8fd3d8;}
+
+@media(max-width:900px){
+  .lanes{grid-template-columns:minmax(0,1fr);}
+}
+
+
+/* ================= モバイル最適化 ================= */
+/* 下部固定CTA（スマホのみ）＝日本語LPの定番。上部バーは隠す */
+.mcta{display:none;}
+@media(max-width:900px){
+  /* --- 左パネル：間延びを解消してコンパクトに --- */
+  .side{justify-content:flex-start;padding:1.7rem var(--pad) 1.9rem;}
+  .side__mid{margin-top:1.5rem;}
+  .side__tag{font-size:10px;}
+  .side__brand{font-size:1.22rem;}
+  .side__lead{font-size:clamp(1.12rem,5.2vw,1.4rem);line-height:1.9;}
+  .side__sub{margin-top:1rem;font-size:12px;}
+
+  /* --- 上部バーは非表示。代わりに下部固定CTA --- */
+  .topbar{display:none;}
+  .mcta{display:grid;grid-template-columns:1fr auto;gap:.6rem;position:fixed;left:0;right:0;bottom:0;z-index:60;
+    padding:.6rem .8rem calc(.6rem + env(safe-area-inset-bottom));
+    background:rgba(245,242,236,.96);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    border-top:1px solid var(--line);}
+  .mcta__main{display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;letter-spacing:.05em;
+    background:var(--accent);color:#fff;padding:.95rem 1rem;min-height:52px;}
+  .mcta__sub{display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;letter-spacing:.04em;
+    border:1px solid var(--line-2);background:var(--white);color:var(--ink);padding:.95rem 1.1rem;min-height:52px;}
+  body{padding-bottom:84px;}
+
+  /* --- MV：高さを抑え、キャプションの見切れを防ぐ --- */
+  .mv img{height:clamp(230px,40vh,340px);}
+  .mv__cap{padding:1.1rem var(--pad);gap:.35rem;}
+  .mv__lb{display:none;}
+  .mv__tx{font-size:13px;line-height:1.7;min-width:0;}
+
+  /* --- 本文の余白と字送りを詰める --- */
+  .sec{padding:clamp(2.8rem,9vw,3.6rem) var(--pad);}
+  .sec__en{font-size:clamp(1.7rem,8.4vw,2.2rem);}
+  .sec__ja{font-size:clamp(1rem,4.6vw,1.18rem);}
+  .sec__ghost{font-size:clamp(4.6rem,26vw,7rem);}
+  .sec__lead{font-size:14px;}
+
+  /* --- 各パーツ --- */
+  .fig__to{font-size:clamp(1.6rem,8vw,2rem);}
+  .svc__img img{height:clamp(180px,44vw,220px);}
+  .work__metric{gap:.5rem;}
+  .means__list{gap:.4rem;}
+  .faq summary{font-size:13.5px;gap:.7rem;}
+  .faq__body{padding-left:1.6rem;font-size:13px;}
+  .lane__qr{width:92px;height:92px;}
+  .foot{padding-bottom:2rem;}
+}
+@media(max-width:420px){
+  .side__lead{font-size:1.12rem;letter-spacing:.03em;}
+  .mcta__main{font-size:13px;padding:.9rem .6rem;}
+  .mcta__sub{font-size:12px;padding:.9rem .8rem;}
+}
+
+
+/* モバイル：グリッドをやめて単純な積み上げに（幅計算の副作用を排除） */
+@media(max-width:900px){
+  .shell{display:block !important;}
+  .side,.main{display:block;width:100%;max-width:100%;box-sizing:border-box;}
+  .side{display:flex;}
+  .mv{overflow:hidden;}
+  .mv__cap{min-width:0;}
+  .mv__tx{min-width:0;word-break:normal;}
+}
+
+
+/* ================= バランス調整（画像・文字の大きさ／版面幅） ================= */
+/* 1) 版面に上限を設ける：広い画面で間延びしないように */
+.sec__head,.sec__lead,.sec__body{max-width:1080px;}
+
+/* 2) MVの写真を控えめに（ファーストビューを写真で埋めない） */
+.mv img{height:clamp(220px,34vh,360px);}
+.mv__cap{padding-block:1.1rem;}
+.mv__tx{font-size:clamp(.86rem,1.15vw,.98rem);}
+.mv__lb{font-size:10px;}
+
+/* 3) 左パネル：上下の空白を整理し、キャッチを中央に置く */
+.side{justify-content:center;}
+.side__top{position:absolute;top:2.2rem;left:var(--pad);right:var(--pad);}
+.side__btm{position:absolute;bottom:2rem;left:var(--pad);right:var(--pad);}
+.side__lead{font-size:clamp(1.06rem,1.42vw,1.28rem);line-height:1.95;}
+.side__sub{font-size:12px;line-height:1.95;}
+.side__brand{font-size:1.18rem;}
+.side__tel-v{font-size:.95rem;}
+
+/* 4) 見出し・数字を1〜2段階小さく */
+.sec{padding-block:clamp(3rem,4.6vw,4.4rem);}
+.sec__en{font-size:clamp(1.6rem,2.5vw,2.1rem);}
+.sec__ja{font-size:clamp(.98rem,1.4vw,1.16rem);margin-top:.55rem;}
+.sec__lead{font-size:13.5px;line-height:2.0;}
+.sec__ghost{font-size:clamp(4.5rem,10vw,9rem);opacity:.035;}
+.fig__to{font-size:clamp(1.5rem,2.3vw,1.95rem);}
+.work__to{font-size:clamp(1.5rem,2.4vw,2rem);}
+.work__ti{font-size:clamp(1rem,1.5vw,1.14rem);}
+.plan__price{font-size:1.28rem;}
+.plan__ti,.svc__ti{font-size:1rem;}
+.svc__img img{height:clamp(160px,15vw,200px);}
+.about__fig{max-width:260px;}
+.work__fig{max-width:440px;}
+.lane__ti{font-size:1rem;}
+
+/* 5) 本文まわりの字送りを少し詰める */
+.svc__tx,.plan__tx,.flow__d,.ba__tx,.about__tx,.lane__tx{font-size:13px;line-height:1.9;}
+.trust__d,.faq__body{font-size:12.5px;}
+.faq summary{font-size:13.5px;}
+
 </style>
 </head>
 <body>
@@ -267,7 +433,7 @@ a{color:inherit;text-decoration:none;}
       <img src="assets/mv_numazu.jpg" alt="沼津の街と狩野川、駿河湾">
       <div class="mv__cap">
         <span class="mv__lb">Area</span>
-        <span class="mv__tx">沼津・三島・裾野・富士・御殿場 ― この街の小さな組織のために。</span>
+        <span class="mv__tx">沼津・三島・裾野・富士・御殿場　―　この街の小さな組織のために。</span>
       </div>
     </div>
 
@@ -433,18 +599,82 @@ a{color:inherit;text-decoration:none;}
     <!-- contact -->
     <section class="sec cv" id="contact">
       <span class="sec__ghost">contact</span>
-      <div class="sec__head"><span class="sec__en">contact</span><span class="sec__ja">お問い合わせ</span></div>
-      <div class="sec__body cv__box">
-        <p class="cv__tx">「何から始めればいいか分からない」状態で構いません。<br>いま面倒だと感じている業務を、30分お聞かせください。</p>
-        <div class="cv__acts">
-          <a class="cv__btn">30分、困りごとを話す</a>
-          <a class="cv__line">LINEで質問する</a>
+      <div class="sec__head"><span class="sec__en">contact</span><span class="sec__ja">まず30分、困りごとを話してみませんか。</span></div>
+      <p class="sec__lead" style="color:var(--on-navy-2)">「まだ検討段階」でも「何から始めればいいか分からない」でも歓迎です。30分後には、自社の業務でどこから手をつければいいかが明確になります。提案・営業は一切しません。</p>
+      <div class="sec__body">
+        <div class="lanes">
+          <div class="lane">
+            <p class="lane__no">01 ／ 予約</p>
+            <p class="lane__ti">30分、困りごとを話す</p>
+            <p class="lane__tx">オンラインの予約ページから、都合の良い時間をお選びいただけます。無料・30分・オンライン。</p>
+            <div class="lane__act">
+              <a class="lane__btn" href="https://timerex.net/s/tp.sibelius_be66/d331711f" target="_blank" rel="noopener">予約ページを開く</a>
+            </div>
+            <p class="lane__hint">外部の予約ページ（TimeRex）が開きます。</p>
+          </div>
+          <div class="lane">
+            <p class="lane__no">02 ／ LINE</p>
+            <p class="lane__ti">LINEで質問する</p>
+            <p class="lane__tx">日程を決める前に聞きたいことがあれば、友だち追加してそのままメッセージをどうぞ。</p>
+            <div class="lane__act">
+              <img class="lane__qr" src="https://qr-official.line.me/gs/M_207uazjc_GW.png?oat_content=qr" width="104" height="104" alt="AI実装Lab LINE友だち追加用QRコード">
+              <div>
+                <a class="lane__btn is-ghost" href="https://line.me/R/ti/p/@207uazjc" target="_blank" rel="noopener">友だち追加</a>
+                <p class="lane__hint">スマホの方はボタン、PCの方はQRコードを。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="contact__mail">またはメールで直接：<a href="mailto:shu.suzuki.numazu@ss-po.com">shu.suzuki.numazu@ss-po.com</a>　／　電話：<a href="tel:08036405346">080-3640-5346</a></p>
+
+        <div class="formwrap">
+          <details>
+            <summary>03 ／ メールフォームで問い合わせる</summary>
+            <p class="form__intro">予約やLINEが使いにくい場合は、こちらからでもご連絡いただけます。1〜2営業日以内にご返信します。</p>
+            <form class="form" action="https://formsubmit.co/shu.suzuki.numazu@ss-po.com" method="POST">
+              <input type="hidden" name="_subject" value="AI実装Lab サイトからのお問い合わせ">
+              <input type="text" name="_honey" style="display:none;" tabindex="-1" autocomplete="off">
+              <div class="field">
+                <label for="name">お名前<span class="req">必須</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="鈴木 太郎">
+              </div>
+              <div class="field">
+                <label for="email">メールアドレス<span class="req">必須</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+              </div>
+              <div class="field">
+                <label for="company">会社・団体名<span class="opt">任意</span></label>
+                <input type="text" id="company" name="company" autocomplete="organization" placeholder="〇〇株式会社 ／ 〇〇NPO">
+              </div>
+              <div class="field">
+                <label for="message">相談内容<span class="opt">任意</span></label>
+                <textarea id="message" name="message" placeholder="いま困っている業務や、聞いてみたいことをお書きください。「何から始めればいいか分からない」だけでも大丈夫です。"></textarea>
+              </div>
+              <div class="field">
+                <label class="consent" for="consent">
+                  <input type="checkbox" id="consent" name="privacy_consent" value="同意済み" required>
+                  <span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意して送信します<span class="req">必須</span></span>
+                </label>
+              </div>
+              <button type="submit" class="form__submit">送信する</button>
+            </form>
+          </details>
         </div>
       </div>
     </section>
 
-    <p class="foot">写真：沼津の風景・制作物の画面は当方撮影／制作。一部の写真素材は StockSnap.io（CC0）。</p>
+    <footer class="foot">
+      <p><strong style="color:var(--ink);font-weight:700">AI実装Lab</strong>　代表：鈴木 秀　／　静岡県沼津市　／　2026年5月開業</p>
+      <p style="margin-top:.4rem">お問い合わせ：<a href="mailto:shu.suzuki.numazu@ss-po.com">shu.suzuki.numazu@ss-po.com</a>　／　<a href="privacy.html">プライバシーポリシー</a></p>
+      <p style="margin-top:.8rem">写真：沼津の風景・制作物の画面は当方撮影／制作。一部の写真素材は StockSnap.io（CC0）。</p>
+    </footer>
   </main>
+</div>
+
+<div class="mcta">
+  <a class="mcta__main" href="https://timerex.net/s/tp.sibelius_be66/d331711f" target="_blank" rel="noopener">30分、困りごとを話す</a>
+  <a class="mcta__sub" href="https://line.me/R/ti/p/@207uazjc" target="_blank" rel="noopener">LINE</a>
 </div>
 
 </body>
