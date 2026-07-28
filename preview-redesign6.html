@@ -53,7 +53,7 @@ a{color:inherit;text-decoration:none;}
 .side__scroll::after{content:"";width:1px;height:52px;background:rgba(255,255,255,.28);}
 .side__tel{text-align:right;}
 .side__tel-lb{font-family:var(--en);font-size:10px;letter-spacing:.24em;color:var(--on-navy-3);}
-.side__tel-v{font-family:var(--en);font-size:1.16rem;letter-spacing:.06em;color:#fff;}
+.side__tel-v{font-family:var(--jp);font-weight:500;font-size:1.02rem;letter-spacing:.07em;color:#fff;font-feature-settings:"tnum" 1;font-variant-numeric:tabular-nums lining-nums;}
 
 /* 右：コンテンツ */
 .main{min-width:0;}
@@ -98,7 +98,7 @@ a{color:inherit;text-decoration:none;}
 /* service：番号付き画像カード */
 .svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.4rem,3vw,2.6rem);}
 .svc__item{min-width:0;}
-.svc__num{font-family:var(--en);font-size:.98rem;letter-spacing:.2em;color:var(--accent);}
+.svc__num{font-family:var(--en);font-size:1.02rem;letter-spacing:.2em;color:var(--accent);font-variant-numeric:lining-nums;}
 .svc__img{margin-top:.8rem;overflow:hidden;position:relative;}
 .svc__img img{width:100%;height:clamp(190px,20vw,250px);object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1);}
 .svc__item:hover .svc__img img{transform:scale(1.045);}
@@ -109,7 +109,7 @@ a{color:inherit;text-decoration:none;}
 /* flow：細罫リスト */
 .flow{border-top:1px solid var(--line);}
 .flow__row{display:grid;grid-template-columns:auto 1fr;gap:1.4rem;align-items:baseline;padding:1.15rem 0;border-bottom:1px solid var(--line);}
-.flow__n{font-family:var(--en);font-size:.95rem;letter-spacing:.18em;color:var(--accent);}
+.flow__n{font-family:var(--en);font-size:1rem;letter-spacing:.18em;color:var(--accent);font-variant-numeric:lining-nums;}
 .flow__t{font-weight:700;font-size:15px;letter-spacing:.03em;}
 .flow__d{display:block;margin-top:.28rem;font-weight:400;font-size:13.5px;color:var(--ink-2);}
 
@@ -147,6 +147,88 @@ a{color:inherit;text-decoration:none;}
   .figs,.svc,.about{grid-template-columns:minmax(0,1fr);}
   .fig{padding:1.3rem 0;} .fig+.fig{border-left:0;border-top:1px solid var(--line);} .fig:first-child{padding-top:0;}
 }
+
+/* ---- 実現の手段 ---- */
+.means{margin-top:clamp(1.8rem,3vw,2.6rem);border-top:1px solid var(--line);padding-top:1.5rem;}
+.means__ti{font-weight:700;font-size:13.5px;letter-spacing:.06em;color:var(--ink);}
+.means__list{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;}
+.means__list li{font-size:12.5px;letter-spacing:.04em;color:var(--ink-2);border:1px solid var(--line);padding:.42rem .9rem;background:var(--white);}
+.means__foot{margin-top:1rem;font-size:12px;color:var(--ink-3);}
+
+/* ---- works ---- */
+.work{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(1.6rem,4vw,3.2rem);align-items:center;}
+.work__badge{display:inline-block;font-size:11px;letter-spacing:.12em;color:var(--accent);border:1px solid var(--accent);padding:.2rem .7rem;}
+.work__ti{margin-top:1rem;font-weight:900;font-size:clamp(1.06rem,2vw,1.28rem);letter-spacing:.04em;}
+.ba{margin-top:1.4rem;border-top:1px solid var(--line);}
+.ba__row{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:baseline;padding:1rem 0;border-bottom:1px solid var(--line);}
+.ba__lb{font-family:var(--en);font-size:.9rem;letter-spacing:.16em;color:var(--ink-3);}
+.ba__lb.is-after{color:var(--accent);}
+.ba__tx{font-size:13.5px;line-height:1.95;color:var(--ink-2);}
+.work__metric{display:flex;align-items:baseline;gap:.7rem;margin-top:1.5rem;flex-wrap:wrap;}
+.work__from{font-size:14px;color:var(--ink-3);}
+.work__ar{font-family:var(--en);color:var(--accent);font-size:17px;}
+.work__to{font-weight:900;font-size:clamp(1.8rem,3.4vw,2.4rem);line-height:1;}
+.work__cut{font-size:12px;letter-spacing:.08em;color:#fff;background:var(--accent);padding:.3rem .8rem;}
+.work__fig{position:relative;}
+.work__fig img{width:100%;}
+.work__fig::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(27,39,51,.12);}
+.work__cap{margin-top:.7rem;font-family:var(--en);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);}
+
+/* ---- price ---- */
+.price{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);}
+.plan{padding:1.8rem 1.7rem 2rem;}
+.plan+.plan{border-left:1px solid var(--line);}
+.plan:first-child{padding-left:0;}
+.plan__top{display:flex;align-items:center;justify-content:space-between;gap:.8rem;}
+.plan__no{font-family:var(--en);font-size:1rem;letter-spacing:.2em;color:var(--accent);font-variant-numeric:lining-nums;}
+.plan__badge{font-size:10.5px;letter-spacing:.1em;color:var(--ink-3);border:1px solid var(--line);padding:.16rem .6rem;}
+.plan__ti{margin-top:1.1rem;font-weight:900;font-size:1.06rem;letter-spacing:.04em;}
+.plan__sub{display:block;margin-top:.3rem;font-weight:500;font-size:12px;color:var(--ink-3);letter-spacing:.04em;}
+.plan__tx{margin-top:.8rem;font-size:13px;line-height:1.95;color:var(--ink-2);}
+.plan__price{margin-top:1.2rem;font-weight:900;font-size:1.5rem;letter-spacing:.02em;}
+.plan__price .u{font-weight:500;font-size:.58em;color:var(--ink-3);margin-left:.3em;}
+.plan__note{margin-top:.7rem;font-size:11.5px;line-height:1.8;color:var(--accent);}
+.terms{margin-top:1.8rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;}
+.term{border:1px solid var(--line);background:var(--white);padding:1.1rem 1.2rem;font-size:12.5px;line-height:1.95;color:var(--ink-2);}
+.term b{display:inline-block;font-size:10.5px;letter-spacing:.1em;color:#fff;background:var(--ink);padding:.14rem .6rem;margin-right:.6rem;}
+.term strong{color:var(--ink);}
+.price__foot{margin-top:1.2rem;font-size:12.5px;color:var(--ink-3);max-width:52em;}
+
+/* ---- compare ---- */
+.cmp{width:100%;border-collapse:collapse;margin-top:clamp(1.6rem,3vw,2.4rem);font-size:13px;}
+.cmp th,.cmp td{border-bottom:1px solid var(--line);padding:1rem .9rem;text-align:left;vertical-align:top;letter-spacing:.03em;}
+.cmp thead th{font-weight:700;font-size:12px;color:var(--ink-2);border-bottom:1px solid var(--ink);}
+.cmp tbody th{font-weight:700;color:var(--ink);width:26%;}
+.cmp .us{background:rgba(10,107,116,.05);color:var(--ink);}
+.cmp thead .us{color:var(--accent);}
+.cmp .mk{font-family:var(--en);font-size:1.1rem;}
+.cmp .note{display:block;font-size:11px;color:var(--ink-3);margin-top:.2rem;}
+
+/* ---- faq ---- */
+.faq{border-top:1px solid var(--line);}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:1rem;padding:1.15rem 0;font-weight:700;font-size:14.5px;letter-spacing:.03em;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::before{content:"Q";font-family:var(--en);font-size:1rem;color:var(--accent);flex:none;}
+.faq summary::after{content:"+";margin-left:auto;font-family:var(--en);font-size:1.1rem;color:var(--ink-3);}
+.faq details[open] summary::after{content:"\2212";}
+.faq__body{padding:0 0 1.3rem 2rem;font-size:13.5px;line-height:2.0;color:var(--ink-2);max-width:52em;}
+
+/* ---- trust ---- */
+.trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem;margin-bottom:clamp(1.8rem,3vw,2.6rem);}
+.trust__i{border-top:1px solid var(--ink);padding-top:1rem;}
+.trust__t{font-weight:700;font-size:13.5px;letter-spacing:.04em;}
+.trust__d{margin-top:.5rem;font-size:12.5px;line-height:1.9;color:var(--ink-2);}
+
+@media(max-width:900px){
+  .work,.price,.terms,.trust{grid-template-columns:minmax(0,1fr);}
+  .plan{padding:1.5rem 0;}
+  .plan+.plan{border-left:0;border-top:1px solid var(--line);}
+  .plan:first-child{padding-top:0;}
+  .cmp{font-size:12px;}
+  .cmp th,.cmp td{padding:.8rem .5rem;}
+}
+
 </style>
 </head>
 <body>
@@ -174,6 +256,8 @@ a{color:inherit;text-decoration:none;}
     <nav class="topbar">
       <a href="#message">できること</a>
       <a href="#service">サービス</a>
+      <a href="#works">実績</a>
+      <a href="#price">料金</a>
       <a href="#flow">進め方</a>
       <a href="#about">担当者</a>
       <a class="cta" href="#contact">30分相談する</a>
@@ -217,6 +301,75 @@ a{color:inherit;text-decoration:none;}
           <p class="svc__tx">問い合わせ・予約の受付、見積や報告書づくり、ホームページ。既製品に合わせず、あなたの業務にちょうどの形で用意します。<br><span style="color:var(--ink-3);font-size:12.5px">（写真：実際に制作したヒアリング支援ツール）</span></p>
         </div>
       </div>
+      <div class="sec__body means">
+        <p class="means__ti">実現の手段は、業務に合わせて選びます</p>
+        <ul class="means__list">
+          <li>テンプレート整備（議事録・報告書・案内文）</li>
+          <li>入力・集計の自動化（フォーム・表計算の連携）</li>
+          <li>簡易データベース・管理画面</li>
+          <li>ウェブサイト・ウェブページの制作</li>
+          <li>LINE公式アカウントでの問い合わせ・案内</li>
+          <li>業務アプリの開発</li>
+        </ul>
+        <p class="means__foot">お客様が選ぶものではなく、お聞きした業務に応じてこちらで使い分ける道具です。手段は今後も増えていきます。</p>
+      </div>
+    </section>
+
+    <!-- works -->
+    <section class="sec" id="works">
+      <span class="sec__ghost">works</span>
+      <div class="sec__head"><span class="sec__en">works</span><span class="sec__ja">業務を経験した人間が、その業務を自動化する。</span></div>
+      <p class="sec__lead">いまお見せできる実測値は、代表自身の業務です。同じやり方を、あなたの業務にも。</p>
+      <div class="sec__body work">
+        <div>
+          <span class="work__badge">実測値 ／ 代表自身の業務</span>
+          <p class="work__ti">調査業務を、AIエージェントで自動化した。</p>
+          <div class="ba">
+            <div class="ba__row"><span class="ba__lb">Before</span><span class="ba__tx">自身の調査業務に週10時間。「自分でやらないといけない」が当たり前になっていた。</span></div>
+            <div class="ba__row"><span class="ba__lb is-after">After</span><span class="ba__tx">AIエージェント・自動化ワークフローを構築し、週3時間に短縮。実装で得た知見を、そのまま支援に活かしている。</span></div>
+          </div>
+          <p class="work__metric"><span class="work__from">週10時間</span><span class="work__ar">&#8594;</span><span class="work__to">週3時間</span><span class="work__cut">70%削減</span></p>
+        </div>
+        <div>
+          <div class="work__fig"><img src="assets/img_tool.jpg" alt="制作したヒアリング支援ツールの画面"></div>
+          <p class="work__cap">Tool &#8213; ヒアリング支援ツール（自社開発）</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- price -->
+    <section class="sec sec--alt" id="price">
+      <span class="sec__ghost">price</span>
+      <div class="sec__head"><span class="sec__en">price</span><span class="sec__ja">いま困っている業務から、小さく始められます。</span></div>
+      <p class="sec__lead">3段階に分けています。まず業務を整理し、1つだけ変えてみて、必要な会社だけ続ける。順番に進めても、途中でやめても構いません。</p>
+      <div class="sec__body">
+        <div class="price">
+          <div class="plan">
+            <div class="plan__top"><span class="plan__no">01</span><span class="plan__badge">スポット</span></div>
+            <p class="plan__ti">業務を整理する<span class="plan__sub">60〜90分の業務棚卸し診断</span></p>
+            <p class="plan__tx">いまの業務を一緒に洗い出し、AIで楽になる部分・手をつけない方がよい部分を切り分けます。最初の一手が決まります。</p>
+            <p class="plan__price">1〜2万円<span class="u">／ 1回</span></p>
+            <p class="plan__note">改善できる業務をご提示できなければ、全額返金します。</p>
+          </div>
+          <div class="plan">
+            <div class="plan__top"><span class="plan__no">02</span><span class="plan__badge">スポット</span></div>
+            <p class="plan__ti">まず1つ変える<span class="plan__sub">1業務の改善</span></p>
+            <p class="plan__tx">見積書・議事録・報告書・案内文など、いま一番時間を取られている1業務を、実際に使える形にします。</p>
+            <p class="plan__price">3〜8万円<span class="u">／ 1業務</span></p>
+          </div>
+          <div class="plan">
+            <div class="plan__top"><span class="plan__no">03</span><span class="plan__badge">月額</span></div>
+            <p class="plan__ti">必要な会社だけ続ける<span class="plan__sub">月次伴走サポート</span></p>
+            <p class="plan__tx">チャットでの随時相談＋月1〜2回のオンラインMTG＋軽微な改善。続けるかどうかは、成果を見てから決めていただけます。</p>
+            <p class="plan__price">1.5〜3万円<span class="u">／ 月</span></p>
+          </div>
+        </div>
+        <div class="terms">
+          <p class="term"><b>保証</b>初回診断は、改善できる業務をご提示できなければ<strong>全額返金</strong>します。リスクを負うのは AI実装Lab 側です。</p>
+          <p class="term"><b>上限</b>月次サポートは品質維持のため、<strong>同時5社まで</strong>としています。空き状況はお問い合わせください。</p>
+        </div>
+        <p class="price__foot">料金はいずれも目安です。実際の料金は、業務の内容と規模をお聞きしてからご提示します。もっと大きな「専用システム」（複数業務をつなぐしくみ、ウェブ・アプリ開発など）も、規模に応じて個別にお見積りします。</p>
+      </div>
     </section>
 
     <!-- flow -->
@@ -227,6 +380,17 @@ a{color:inherit;text-decoration:none;}
         <div class="flow__row"><span class="flow__n">01</span><span class="flow__t">聞く<span class="flow__d">いま手間になっている業務を、30分うかがいます。整理はこちらの仕事です。</span></span></div>
         <div class="flow__row"><span class="flow__n">02</span><span class="flow__t">その場で形にする<span class="flow__d">使えるかどうかを、実物を見ながら判断できる状態にします。</span></span></div>
         <div class="flow__row"><span class="flow__n">03</span><span class="flow__t">現場で回るまで<span class="flow__d">渡して終わりにせず、日々の業務に馴染むところまで伴走します。</span></span></div>
+      </div>
+      <div class="sec__body">
+        <table class="cmp">
+          <thead><tr><th>&#12288;</th><th>大手コンサル</th><th>受託開発・SES</th><th class="us">AI実装Lab</th></tr></thead>
+          <tbody>
+            <tr><th>実装（コードを書く）</th><td><span class="mk">&#215;</span></td><td><span class="mk">&#9675;</span></td><td class="us"><span class="mk">&#9675;</span></td></tr>
+            <tr><th>業務そのものの理解</th><td><span class="mk">&#9675;</span></td><td><span class="mk">&#9651;</span></td><td class="us"><span class="mk">&#9675;</span><span class="note">7年の実務経験</span></td></tr>
+            <tr><th>支援の終わり方</th><td>提案書を渡して終了</td><td>納品・検収で終了</td><td class="us">使われて成果が出るまで。<span class="note">最終的に自走できる状態まで</span></td></tr>
+          </tbody>
+        </table>
+        <p class="price__foot">相談だけでも歓迎です。提案・営業は一切しません。伴走の出口は、自走です。</p>
       </div>
     </section>
 
@@ -242,6 +406,26 @@ a{color:inherit;text-decoration:none;}
         <div>
           <p class="about__name">鈴木 秀<small>代表 ／ 沼津</small></p>
           <p class="about__tx">行政・政策・法人運営の現場を経て、いまはAIで業務を整理・自動化する仕事をしています。提案書を渡して終わりでも、言われたものを作るだけでもなく、聞いて・形にして・現場で回るところまで。相談から実装まで、私がひとりで担当します。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- faq -->
+    <section class="sec" id="faq">
+      <span class="sec__ghost">faq</span>
+      <div class="sec__head"><span class="sec__en">faq</span><span class="sec__ja">安心してご相談いただくために。</span></div>
+      <div class="sec__body">
+        <div class="trust">
+          <div class="trust__i"><p class="trust__t">外部AIサービスの明示</p><p class="trust__d">利用する外部AIサービス（API）を事前に明示し、ご合意のうえで利用します。</p></div>
+          <div class="trust__i"><p class="trust__t">秘密保持契約（NDA）に対応</p><p class="trust__d">ご希望に応じてNDAを締結し、事業情報は厳重に取り扱います。</p></div>
+          <div class="trust__i"><p class="trust__t">データの保存・削除方針</p><p class="trust__d">お預かりしたデータの保存範囲・削除方針を、作業前に取り決めます。</p></div>
+        </div>
+        <div class="faq">
+          <details><summary>ITやAIに詳しくないのですが、大丈夫ですか？</summary><div class="faq__body">むしろ、詳しくない方が対象です。専門用語は使わず、いま困っている業務の話から進めます。設定や操作もこちらで実装します。少人数の組織ほど事務作業が特定の人に集中しているため、効果が出やすいです。</div></details>
+          <details><summary>静岡県東部以外でも対応できますか？</summary><div class="faq__body">ご相談・ご支援はオンライン（Zoom / Google Meet）で全国対応が可能です。訪問を伴う支援については、沼津・三島・裾野・富士・御殿場を中心とした静岡県東部が中心となります。</div></details>
+          <details><summary>会社のデータを外部のAIに渡すのが不安です。</summary><div class="faq__body">ご不安はもっともです。上の3つの約束のとおり、利用する外部AIサービスは事前に明示しご合意のうえで利用し、ご希望に応じてNDAを締結、データの保存範囲・削除方針は作業前に取り決めます。</div></details>
+          <details><summary>相談したら、契約を勧められませんか？</summary><div class="faq__body">提案・営業は一切しません。初回30分のオンライン相談は無料です。相談だけで終わっていただいて構いませんし、その方が良いと判断すれば「いまは不要です」とお伝えします。</div></details>
+          <details><summary>途中でやめることはできますか？</summary><div class="faq__body">はい。スポットのご依頼は1回ごとに完結します。月次伴走サポートも、続けるかどうかは成果を見てから決めていただけます。合わないと感じたら、いつでも終了できます。</div></details>
         </div>
       </div>
     </section>
