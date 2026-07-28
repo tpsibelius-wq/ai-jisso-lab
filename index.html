@@ -51,7 +51,8 @@ a{color:inherit;text-decoration:none;}
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
 .side__top{position:relative;z-index:1;}
 .side__tag{font-size:10.5px;letter-spacing:.12em;color:var(--on-navy-3);margin-bottom:.5rem;line-height:1.8;}
-.side__brand{font-family:var(--jp);font-weight:900;font-size:1.32rem;letter-spacing:.1em;color:#fff;}
+.side__brand{margin-top:.2rem;}
+.side__brand img{width:clamp(152px,13vw,196px);height:auto;}
 .side__mid{position:relative;z-index:1;}
 .side__lead{font-weight:700;font-size:clamp(1.16rem,1.72vw,1.46rem);line-height:1.95;letter-spacing:.05em;color:#fff;}
 .side__lead span{display:block;white-space:nowrap;}   /* 1行ずつ確定させ、途中改行を防ぐ */
@@ -297,7 +298,7 @@ a{color:inherit;text-decoration:none;}
   .side{justify-content:flex-start;padding:1.7rem var(--pad) 1.9rem;}
   .side__mid{margin-top:1.5rem;}
   .side__tag{font-size:10px;}
-  .side__brand{font-size:1.22rem;}
+  .side__brand img{width:168px;}
   .side__lead{font-size:clamp(1.12rem,5.2vw,1.4rem);line-height:1.9;}
   .side__sub{margin-top:1rem;font-size:12px;}
 
@@ -370,7 +371,7 @@ a{color:inherit;text-decoration:none;}
 .side__btm{position:absolute;bottom:2rem;left:var(--pad);right:var(--pad);}
 .side__lead{font-size:clamp(1.06rem,1.42vw,1.28rem);line-height:1.95;}
 .side__sub{font-size:12px;line-height:1.95;}
-.side__brand{font-size:1.18rem;}
+.side__brand img{width:clamp(146px,12vw,180px);}
 .side__tel-v{font-size:.95rem;}
 
 /* 4) 見出し・数字を1〜2段階小さく */
@@ -404,7 +405,7 @@ a{color:inherit;text-decoration:none;}
   <aside class="side">
     <div class="side__top">
       <p class="side__tag">静岡県東部の中小企業・士業・NPOへ<br>現場に入るAIエンジニア</p>
-      <p class="side__brand">AI実装Lab</p>
+      <p class="side__brand"><img src="assets/logo-white.png" alt="AI実装Lab" width="440" height="187"></p>
     </div>
     <div class="side__mid">
       <p class="side__lead"><span>数百万円だった</span><span>“専用システム”を、</span><span><span class="ac" style="display:inline">手が届く値段</span>で。</span></p>
@@ -664,7 +665,7 @@ a{color:inherit;text-decoration:none;}
     </section>
 
     <footer class="foot">
-      <p><strong style="color:var(--ink);font-weight:700">AI実装Lab</strong>　代表：鈴木 秀　／　静岡県沼津市　／　2026年5月開業</p>
+      <p><img src="assets/logo.png" alt="AI実装Lab" style="width:150px;height:auto;margin-bottom:.7rem">代表：鈴木 秀　／　静岡県沼津市　／　2026年5月開業</p>
       <p style="margin-top:.4rem">お問い合わせ：<a href="mailto:shu.suzuki.numazu@ss-po.com">shu.suzuki.numazu@ss-po.com</a>　／　<a href="privacy.html">プライバシーポリシー</a></p>
       <p style="margin-top:.8rem">写真：沼津の風景・制作物の画面は当方撮影／制作。一部の写真素材は StockSnap.io（CC0）。</p>
     </footer>
