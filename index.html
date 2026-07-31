@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI実装Lab｜数百万円だった専用システムを、手が届く値段で（静岡県東部）</title>
-  <meta name="description" content="問い合わせ対応・予約受付・ホームページ、見積やメール作成まで。散らばった業務を整理し、あなたにちょうどのしくみに。これまで数百万円かかった専用システムも、AIで早く・安く。静岡県東部（沼津・三島・裾野・富士・御殿場）の小さな会社・事務所・地域団体向け。">
+  <title>AI実装Lab｜毎月くり返す書類仕事を、まず一つ減らします（静岡県東部）</title>
+  <meta name="description" content="見積、報告書、議事録、問い合わせ・予約の対応。毎月くり返している仕事のやり方をうかがい、無理なく使える仕組みにします。静岡県東部（沼津・三島・裾野・富士・御殿場）の小さな会社・事務所・地域団体へ。相談から実装まで、鈴木が担当します。">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AI実装Lab｜数百万円だった専用システムを、手が届く値段で">
-  <meta property="og:description" content="問い合わせ対応・予約受付・ホームページ、書類やメール作成まで。散らばった業務を整理し、あなたにちょうどのしくみを、AIで早く・安く。相談から実装まで、鈴木が担当します。">
+  <meta property="og:title" content="AI実装Lab｜毎月くり返す書類仕事を、まず一つ減らします">
+  <meta property="og:description" content="見積、報告書、問い合わせ対応など、いまのやり方を聞き、無理なく使える仕組みにします。静岡県東部の小さな会社・事務所・地域団体へ。相談から実装まで、鈴木が担当します。">
   <meta property="og:image" content="https://tpsibelius-wq.github.io/ai-jisso-lab/assets/ogp.png">
   <meta property="og:url" content="https://tpsibelius-wq.github.io/ai-jisso-lab/">
   <meta name="twitter:card" content="summary_large_image">
@@ -54,7 +54,7 @@ a{color:inherit;text-decoration:none;}
 .side__brand{margin-top:.2rem;}
 .side__brand img{width:clamp(152px,13vw,196px);height:auto;}
 .side__mid{position:relative;z-index:1;}
-.side__lead{font-weight:700;font-size:clamp(1.16rem,1.72vw,1.46rem);line-height:1.95;letter-spacing:.05em;color:#fff;}
+.side__lead{margin:0;font-weight:700;font-size:clamp(1.16rem,1.72vw,1.46rem);line-height:1.95;letter-spacing:.05em;color:#fff;}
 .side__lead span{display:block;white-space:nowrap;}   /* 1行ずつ確定させ、途中改行を防ぐ */
 .side__lead .ac{color:#8fd3d8;}
 .side__sub{margin-top:1.2rem;font-size:12.5px;line-height:2.0;color:var(--on-navy-2);letter-spacing:.06em;}
@@ -401,6 +401,18 @@ a{color:inherit;text-decoration:none;}
 .side__sub2{font-size:11px;letter-spacing:.05em;color:var(--on-navy-3);border-bottom:1px solid rgba(255,255,255,.24);padding-bottom:2px;}
 .side__sub2:hover{color:#fff;border-color:rgba(255,255,255,.6);}
 
+
+/* ===== モバイル：ロゴと主見出しの重なりを解消（記述順の都合で末尾に置く） ===== */
+@media(max-width:900px){
+  .side{justify-content:flex-start;}
+  .side__top{position:relative;top:auto;left:auto;right:auto;}
+  .side__btm{position:relative;bottom:auto;left:auto;right:auto;margin-top:1.6rem;
+    flex-direction:row;align-items:center;justify-content:space-between;}
+  .side__mid{margin-top:1.4rem;}
+  .side__scroll{display:none;}
+  .side__act{align-items:flex-start;text-align:left;}
+}
+
 </style>
 </head>
 <body>
@@ -414,8 +426,8 @@ a{color:inherit;text-decoration:none;}
       <p class="side__brand"><img src="assets/logo-white-v2.png" alt="AI実装Lab" width="1133" height="478"></p>
     </div>
     <div class="side__mid">
-      <p class="side__lead"><span>数百万円だった</span><span>“専用システム”を、</span><span><span class="ac" style="display:inline">手が届く値段</span>で。</span></p>
-      <p class="side__sub">聞いて、形にして、<br>現場で回るところまで。<br>相談から実装まで、<br>鈴木がひとりで担当します。</p>
+      <h1 class="side__lead"><span>毎月くり返す書類仕事を、</span><span><span class="ac" style="display:inline">まず一つ</span>、減らします。</span></h1>
+      <p class="side__sub">見積、報告書、問い合わせ対応など、<br>いまのやり方を聞き、<br>無理なく使える仕組みにします。<br>相談から実装まで、鈴木が担当します。</p>
     </div>
     <div class="side__btm">
       <span class="side__scroll">Scroll</span>
@@ -449,10 +461,10 @@ a{color:inherit;text-decoration:none;}
     <!-- message -->
     <section class="sec" id="message">
       <span class="sec__ghost">message</span>
-      <div class="sec__head"><span class="sec__en">message</span><span class="sec__ja">たとえば、こう変わります。</span></div>
-      <p class="sec__lead">問い合わせ対応・予約受付・ホームページ、見積やメール、自社様式の書類。<b style="white-space:nowrap">散らばった業務を整理</b>して、あなたにちょうどの仕組みに。既製ソフトに業務を合わせるのではなく、AIで早く・安くつくります。</p>
+      <div class="sec__head"><span class="sec__en">message</span><span class="sec__ja">まず一つ、手間の大きい仕事から。</span></div>
+      <p class="sec__lead">見積、報告書、議事録、問い合わせ・予約の対応。毎月くり返している仕事のやり方をうかがい、<b style="white-space:nowrap">無理なく使える仕組み</b>にします。既製ソフトに業務を合わせるのではなく、いまのやり方に沿った形で用意します。</p>
       <div class="sec__body figs">
-        <div class="fig"><p class="fig__lb">専用ツールの費用</p><p class="fig__row"><span class="fig__from">数百万円</span><span class="fig__ar">→</span><span class="fig__to">数万円<span class="u">〜</span></span></p><p class="fig__note">規模に応じて個別見積</p></div>
+        <div class="fig"><p class="fig__lb">最初の一歩</p><p class="fig__row"><span class="fig__to">1業務<span class="u">から</span></span></p><p class="fig__note">まず手間の大きい仕事を一つ選びます</p></div>
         <div class="fig"><p class="fig__lb">見積・書類の作成</p><p class="fig__row"><span class="fig__from">2〜3時間</span><span class="fig__ar">→</span><span class="fig__to">20<span class="u">分</span></span></p><p class="fig__note"><span class="assume">※想定</span> テンプレート＋AI補完で</p></div>
         <div class="fig"><p class="fig__lb">月次の報告書づくり</p><p class="fig__row"><span class="fig__from">2日</span><span class="fig__ar">→</span><span class="fig__to">3<span class="u">時間</span></span></p><p class="fig__note"><span class="assume">※想定</span> 議事録から自動生成</p></div>
       </div>
@@ -498,12 +510,13 @@ a{color:inherit;text-decoration:none;}
       <div class="sec__body work">
         <div>
           <span class="work__badge">実測値 ／ 代表自身の業務</span>
-          <p class="work__ti">調査業務を、AIエージェントで自動化した。</p>
+          <p class="work__ti">ヒアリングと調査の準備を、自作ツールで自動化した。</p>
           <div class="ba">
-            <div class="ba__row"><span class="ba__lb">Before</span><span class="ba__tx">自身の調査業務に週10時間。「自分でやらないといけない」が当たり前になっていた。</span></div>
-            <div class="ba__row"><span class="ba__lb is-after">After</span><span class="ba__tx">AIエージェント・自動化ワークフローを構築し、週3時間に短縮。実装で得た知見を、そのまま支援に活かしている。</span></div>
+            <div class="ba__row"><span class="ba__lb">Before</span><span class="ba__tx">面談前の論点整理と調査に週10時間。資料を読み、聞くことを組み立てる作業を毎回ゼロから行っていた。</span></div>
+            <div class="ba__row"><span class="ba__lb is-after">After</span><span class="ba__tx">右の画面のヒアリング支援ツールを自作し、論点の下書きと調査を自動化。週3時間に短縮した。出力は毎回自分で確認し、必要な部分は手で直している。</span></div>
           </div>
           <p class="work__metric"><span class="work__from">週10時間</span><span class="work__ar">&#8594;</span><span class="work__to">週3時間</span><span class="work__cut">70%削減</span></p>
+          <p class="fig__note" style="margin-top:.9rem">2026年4〜6月／代表自身の面談準備業務を対象に計測。人手による確認・修正の時間を含みます。</p>
         </div>
         <div>
           <div class="work__fig"><img src="assets/img_tool.png" alt="制作したヒアリング支援ツールの画面"></div>
@@ -524,12 +537,12 @@ a{color:inherit;text-decoration:none;}
             <p class="plan__ti">業務を整理する<span class="plan__sub">60〜90分の業務棚卸し診断</span></p>
             <p class="plan__tx">いまの業務を一緒に洗い出し、AIで楽になる部分・手をつけない方がよい部分を切り分けます。最初の一手が決まります。</p>
             <p class="plan__price">1〜2万円<span class="u">／ 1回</span></p>
-            <p class="plan__note">改善できる業務をご提示できなければ、全額返金します。</p>
+            <p class="plan__note">改善可能な業務課題を2件以上ご提示できなかった場合、診断料を全額返金します（実施後14日以内のお申し出に限ります）。</p>
           </div>
           <div class="plan">
             <div class="plan__top"><span class="plan__no">02</span><span class="plan__badge">スポット</span></div>
             <p class="plan__ti">まず1つ変える<span class="plan__sub">1業務の改善</span></p>
-            <p class="plan__tx">見積書・議事録・報告書・案内文など、いま一番時間を取られている1業務を、実際に使える形にします。</p>
+            <p class="plan__tx">見積書・議事録・報告書・案内文など、いま一番時間を取られている1業務を、実際に使える形にします。<br><span style="color:var(--ink-3);font-size:12px">含むもの：対象業務1つ／ヒアリング／試作／修正2回まで／操作説明。複数部署、基幹システム連携、大量データ移行、継続保守は個別見積です。</span></p>
             <p class="plan__price">3〜8万円<span class="u">／ 1業務</span></p>
           </div>
           <div class="plan">
@@ -540,7 +553,7 @@ a{color:inherit;text-decoration:none;}
           </div>
         </div>
         <div class="terms">
-          <p class="term"><b>保証</b>初回診断は、改善できる業務をご提示できなければ<strong>全額返金</strong>します。リスクを負うのは AI実装Lab 側です。</p>
+          <p class="term"><b>保証</b>60〜90分の業務棚卸し診断で、改善可能な業務課題を<strong>2件以上ご提示できなかった場合、診断料を全額返金</strong>します。適用は実施後14日以内のお申し出に限ります。</p>
           <p class="term"><b>上限</b>月次サポートは品質維持のため、<strong>同時5社まで</strong>としています。空き状況はお問い合わせください。</p>
         </div>
         <p class="price__foot">料金はいずれも目安です。実際の料金は、業務の内容と規模をお聞きしてからご提示します。もっと大きな「専用システム」（複数業務をつなぐしくみ、ウェブ・アプリ開発など）も、規模に応じて個別にお見積りします。</p>
@@ -558,14 +571,15 @@ a{color:inherit;text-decoration:none;}
       </div>
       <div class="sec__body">
         <table class="cmp">
-          <thead><tr><th>&#12288;</th><th>大手コンサル</th><th>受託開発・SES</th><th class="us">AI実装Lab</th></tr></thead>
+          <thead><tr><th>支援範囲</th><th class="us">AI実装Labが行うこと</th></tr></thead>
           <tbody>
-            <tr><th>実装（コードを書く）</th><td><span class="mk">&#215;</span></td><td><span class="mk">&#9675;</span></td><td class="us"><span class="mk">&#9675;</span></td></tr>
-            <tr><th>業務そのものの理解</th><td><span class="mk">&#9675;</span></td><td><span class="mk">&#9651;</span></td><td class="us"><span class="mk">&#9675;</span><span class="note">7年の実務経験</span></td></tr>
-            <tr><th>支援の終わり方</th><td>提案書を渡して終了</td><td>納品・検収で終了</td><td class="us">使われて成果が出るまで。<span class="note">最終的に自走できる状態まで</span></td></tr>
+            <tr><th>業務整理</th><td class="us">現在の作業と判断を一緒に分解します。</td></tr>
+            <tr><th>試作・実装</th><td class="us">実物を見ながら、小さく作ります。</td></tr>
+            <tr><th>定着</th><td class="us">現場で使える状態まで調整します。</td></tr>
+            <tr><th>終了</th><td class="us">自社で回せる状態を目指します。</td></tr>
           </tbody>
         </table>
-        <p class="price__foot">相談だけでも歓迎です。提案・営業は一切しません。伴走の出口は、自走です。</p>
+        <p class="price__foot">相談だけでも歓迎です。相談後に契約を迫ることはありません。いまは不要だと判断した場合は、その旨を率直にお伝えします。伴走の出口は、自走です。</p>
       </div>
     </section>
 
@@ -586,7 +600,7 @@ a{color:inherit;text-decoration:none;}
     </section>
 
     <!-- faq -->
-    <section class="sec" id="faq">
+    <section class="sec" id="faq"><span id="security" style="position:absolute;top:0"></span>
       <span class="sec__ghost">faq</span>
       <div class="sec__head"><span class="sec__en">faq</span><span class="sec__ja">安心してご相談いただくために。</span></div>
       <div class="sec__body">
@@ -599,7 +613,7 @@ a{color:inherit;text-decoration:none;}
           <details><summary>ITやAIに詳しくないのですが、大丈夫ですか？</summary><div class="faq__body">むしろ、詳しくない方が対象です。専門用語は使わず、いま困っている業務の話から進めます。設定や操作もこちらで実装します。少人数の組織ほど事務作業が特定の人に集中しているため、効果が出やすいです。</div></details>
           <details><summary>静岡県東部以外でも対応できますか？</summary><div class="faq__body">ご相談・ご支援はオンライン（Zoom / Google Meet）で全国対応が可能です。訪問を伴う支援については、沼津・三島・裾野・富士・御殿場を中心とした静岡県東部が中心となります。</div></details>
           <details><summary>会社のデータを外部のAIに渡すのが不安です。</summary><div class="faq__body">ご不安はもっともです。上の3つの約束のとおり、利用する外部AIサービスは事前に明示しご合意のうえで利用し、ご希望に応じてNDAを締結、データの保存範囲・削除方針は作業前に取り決めます。</div></details>
-          <details><summary>相談したら、契約を勧められませんか？</summary><div class="faq__body">提案・営業は一切しません。初回30分のオンライン相談は無料です。相談だけで終わっていただいて構いませんし、その方が良いと判断すれば「いまは不要です」とお伝えします。</div></details>
+          <details><summary>相談したら、契約を勧められませんか？</summary><div class="faq__body">初回30分のオンライン相談は無料で、相談後に契約を迫ることはありません。相談だけで終わっていただいて構いませんし、いまは不要だと判断した場合は、その旨を率直にお伝えします。</div></details>
           <details><summary>途中でやめることはできますか？</summary><div class="faq__body">はい。スポットのご依頼は1回ごとに完結します。月次伴走サポートも、続けるかどうかは成果を見てから決めていただけます。合わないと感じたら、いつでも終了できます。</div></details>
         </div>
       </div>
@@ -609,7 +623,7 @@ a{color:inherit;text-decoration:none;}
     <section class="sec cv" id="contact">
       <span class="sec__ghost">contact</span>
       <div class="sec__head"><span class="sec__en">contact</span><span class="sec__ja">まず30分、困りごとを話してみませんか。</span></div>
-      <p class="sec__lead" style="color:var(--on-navy-2)">「まだ検討段階」でも「何から始めればいいか分からない」でも歓迎です。30分後には、自社の業務でどこから手をつければいいかが明確になります。提案・営業は一切しません。</p>
+      <p class="sec__lead" style="color:var(--on-navy-2)">「まだ検討段階」でも「何から始めればいいか分からない」でも歓迎です。30分で、どの業務から確認するかを一緒に整理します。相談後に契約を迫ることはありません。</p>
       <div class="sec__body">
         <div class="lanes">
           <div class="lane">
