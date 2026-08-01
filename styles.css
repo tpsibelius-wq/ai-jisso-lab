@@ -682,6 +682,40 @@ h3 { font-size: 17px; font-weight: 700; line-height: 1.7; }
 }
 .case-card.is-self { border-color: var(--line-2); background: var(--white); }
 .case-card.is-self .case-card__label { color: var(--ink-2); }
+
+/* Measured-result card with the real tool screenshot (text left, figure right on PC) */
+.case-media { margin-top: .4rem; display: grid; gap: 1.4rem; }
+.case-note { margin-top: .7rem; font-size: .78rem; color: var(--ink-3); letter-spacing: .04em; }
+.case-media__fig { margin: 0; }
+.case-media__fig img {
+  width: 100%; height: auto;
+  border: 1px solid var(--line-2);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+}
+.case-media__fig figcaption {
+  margin-top: .55rem;
+  font-family: var(--font-mono);
+  font-size: .72rem; letter-spacing: .06em;
+  color: var(--ink-3);
+}
+@media (min-width: 768px) {
+  .case-media { grid-template-columns: 1.1fr 1fr; align-items: start; gap: 2rem; }
+}
+
+/* Full-width area photo band above the contact section */
+.area-band { position: relative; }
+.area-band img {
+  width: 100%; height: clamp(200px, 30vw, 320px);
+  object-fit: cover; display: block;
+}
+.area-band__cap {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 2.2rem var(--gutter) .9rem;
+  color: #fff; font-size: .88rem; font-weight: 700; letter-spacing: .06em;
+  background: linear-gradient(transparent, rgba(7, 27, 46, .72));
+  text-align: center;
+}
 /* Customer voice — markup is prepared but commented out until real quotes exist
    (placeholder now lives in 03 実績と担当者; see README「お客様の声の追加手順」) */
 .case-voice {
