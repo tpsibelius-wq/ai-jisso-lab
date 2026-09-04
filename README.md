@@ -68,7 +68,7 @@ Google Fonts（Noto Sans JP）のみオンライン読み込みのため、初�
 |---|---|---|---|---|
 | LINE友だち追加URL | ベーシックID `@207uazjc` | 設定済み: `https://line.me/R/ti/p/@207uazjc`（変更時はこのURLを全置換） | ヒーロー「LINEで相談」ボタン／お問い合わせ「友だち追加」ボタン（計2箇所） | ✅ 済 |
 | 予約リンクURL | TimeRex 予約ページ | 設定済み: `https://timerex.net/s/tp.sibelius_be66/d331711f`（変更時はこのURLを全置換） | ヘッダーCTA／ヒーロー主CTA／モバイル固定CTAバー／お問い合わせ「予約ページを開く」ボタン（計4箇所） | ✅ 済 |
-| お問い合わせフォーム有効化 | FormSubmit の初回認証（キー不要） | サイト公開後にフォームから1回テスト送信 → `shu.suzuki.numazu@ss-po.com` に届く formsubmit.co の確認メール内「Activate」をクリック | お問い合わせフォーム（`action="https://formsubmit.co/..."`） | ⬜ 未 |
+| お問い合わせフォーム有効化 | FormSubmit の初回認証（キー不要） | サイト公開後にフォームから1回テスト送信 → `ai.works@ss-po.com` に届く formsubmit.co の確認メール内「Activate」をクリック | お問い合わせフォーム（`action="https://formsubmit.co/..."`） | ⬜ 未 |
 | プライバシーポリシーの保存期間 | 「対応終了後1年を目安に削除」と記載中 | `privacy.html` の `<!-- TODO(確認): 保存期間はご本人の方針を確認 -->` を確認し、方針が違えば本文を修正してコメントを削除 | `privacy.html` 6章 | ⬜ 未 |
 | LINE QR画像 | LINE公式の埋め込みQR | 設定済み: HTMLは `https://qr-official.line.me/gs/M_207uazjc_GW.png?oat_content=qr` を直接参照（`assets/line-qr.png` は同じQRのローカル控え。デプロイ不要） | お問い合わせ LINE欄の `<img>`（1箇所） | ✅ 済 |
 | `og:image` | SNSシェア用のOGP画像 | **1200×630px** の画像を用意して公開URLに置き、`index.html` の `<head>` 内コメント `<!-- TODO(placeholder): og:image ... -->` を外して `content` を実URLに差し替える（相対パス不可・絶対URLが必要） | `<head>` メタ（コメントアウト済み） | ⬜ 未 |
@@ -78,7 +78,7 @@ Google Fonts（Noto Sans JP）のみオンライン読み込みのため、初�
 
 - **`is-pending` の役割**：LINE・予約ボタンに付けると、右上に「準備中」バッジが表示され、押しても壊れないダミー状態になります。実URLを入れたら必ず外してください。
 - **導線の優先順位**：主導線は**予約（TimeRex）**、副導線は**LINE**、第三の手段が**フォーム**です。ヘッダー・ヒーロー・モバイル固定バーの主CTAはすべてTimeRexへ直リンクしています。フォームは上記の「Activate」が未完了の間は**受信できない**ため、UI上も「予約やLINEが使いにくい場合は」という位置づけに留めています。Activate完了までは、フォームを唯一の連絡手段として案内しないでください。
-- **メールアドレス**は `shu.suzuki.numazu@ss-po.com` を直接記載済み（ヒーロー補助リンク先・フォーム下・フッター）。変更時は3箇所を置換してください。
+- **メールアドレス**は `ai.works@ss-po.com` を直接記載済み（ヒーロー補助リンク先・フォーム下・フッター）。変更時は3箇所を置換してください。
 
 ---
 
@@ -157,7 +157,7 @@ FAQは 05「安心のために」ブロックの後半にあります（前半�
 ### 1. お問い合わせフォームの有効化（FormSubmit）— 約1分
 
 1. サイト公開後、LPのフォームにテスト内容を入れて1回送信する
-2. `shu.suzuki.numazu@ss-po.com` に formsubmit.co から確認メールが届く →「Activate」リンクをクリック
+2. `ai.works@ss-po.com` に formsubmit.co から確認メールが届く →「Activate」リンクをクリック
 3. 以降の送信内容がメールで届くようになる（もう1回テスト送信して着信確認を推奨）
 
 補足（任意）:
